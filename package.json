@@ -1,0 +1,78 @@
+{
+  "name": "endoflife-ai",
+  "displayName": "EOL Check — endoflife.ai",
+  "description": "Inline end-of-life warnings for your runtime version files. Powered by endoflife.ai.",
+  "version": "1.0.0",
+  "publisher": "endoflife-ai",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Linters",
+    "Other"
+  ],
+  "keywords": [
+    "eol",
+    "end-of-life",
+    "security",
+    "devops",
+    "nodejs",
+    "python",
+    "runtime",
+    "nvmrc",
+    "dockerfile"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "EOL Check",
+      "properties": {
+        "endoflifeAi.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "endoflife.ai Pro API key (optional — free tier used if not set)"
+        },
+        "endoflifeAi.warningDays": {
+          "type": "number",
+          "default": 90,
+          "description": "Days before EOL to show a warning (default: 90)"
+        },
+        "endoflifeAi.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable EOL Check"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "endoflifeAi.checkNow",
+        "title": "EOL Check: Scan workspace now"
+      },
+      {
+        "command": "endoflifeAi.openScoreCard",
+        "title": "EOL Check: Open score card on endoflife.ai"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/endoflife-ai/vscode-eol-check"
+  },
+  "homepage": "https://endoflife.ai",
+  "license": "MIT"
+}
