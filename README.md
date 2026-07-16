@@ -38,13 +38,23 @@ Opens a red underline (error) or yellow underline (warning) on any version pin t
 
 ## Data
 
-EOL dates sourced from [endoflife.ai](https://endoflife.ai) — free lifecycle intelligence for 455+ products, updated daily. Results are cached for 1 hour to minimise API calls.
+EOL dates sourced from [endoflife.ai](https://endoflife.ai) — free lifecycle intelligence for 480+ products, updated daily. Results are cached for 1 hour to minimise API calls.
 
 ## API & rate limits
 
 Free tier: 100 requests/day. For teams or large workspaces, add a Pro API key in settings.
 
 [Get a Pro API key →](https://endoflife.ai/api)
+
+## REST API
+
+Everything this integration shows is also available as a REST API — EOL dates and EOL Risk Scores for 480+ products, with an [OpenAPI 3.0 spec](https://api.endoflife.ai/openapi.json) you can import straight into Postman, Insomnia, or your codegen tool.
+
+```bash
+curl https://api.endoflife.ai/v1/score/nodejs/18
+```
+
+Free tier: 100 requests/day anonymous, or [grab a free key](https://endoflife.ai/api#free-key) for 500/day. Full docs: [endoflife.ai/api](https://endoflife.ai/api)
 
 ## License
 
