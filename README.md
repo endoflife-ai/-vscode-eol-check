@@ -1,5 +1,7 @@
 # EOL Check — endoflife.ai
 
+[![Node.js EOL status](https://img.shields.io/endpoint?url=https%3A%2F%2Fendoflife.ai%2Fbadge%2Fnodejs.json)](https://endoflife.ai/nodejs) [![EOL data: endoflife.ai](https://img.shields.io/badge/EOL%20data-endoflife.ai-16a34a)](https://endoflife.ai)
+
 **Inline end-of-life warnings for your runtime version files.**
 
 See EOL warnings directly in your editor as you work — no terminal, no CI, no waiting. Powered by [endoflife.ai](https://endoflife.ai).
